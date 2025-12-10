@@ -70,7 +70,26 @@ a:hover {
     text-decoration: underline;
 }
 
-/* 5. Projects Section */
+/* --- General Button Styling --- */
+.btn {
+    display: inline-block;
+    background-color: var(--color-primary); /* Orange button background */
+    color: #ffffff !important; /* Ensure white text on button */
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #cc6a00; /* Darker Orange on hover */
+    text-decoration: none;
+}
+
+/* 5. Projects Section (Old homepage styles - kept for structure) */
 .project-item {
     margin: 25px 0;
     padding: 15px 0;
@@ -80,7 +99,7 @@ a:hover {
     display: block;
     font-size: 1.3em;
     font-weight: 600;
-    color: var(--color-dark-base); /* Dark Navy Blue */
+    color: var(--color-dark-base);
     margin-bottom: 5px;
 }
 
@@ -92,7 +111,7 @@ a:hover {
 
 .project-item a.project-title:hover {
     text-decoration: none;
-    color: var(--color-primary); /* Orange on hover */
+    color: var(--color-primary);
 }
 
 /* 6. Footer */
@@ -106,7 +125,7 @@ footer {
 
 /* 7. Navigation Bar */
 .navbar {
-    background-color: var(--color-dark-base); /* Dark Navy Blue background */
+    background-color: var(--color-dark-base);
     padding: 15px 0;
     width: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -137,7 +156,7 @@ footer {
 
 .navbar a:hover {
     color: #ffffff;
-    background-color: var(--color-primary); /* Orange hover effect */
+    background-color: var(--color-primary);
     border-radius: 4px;
     text-decoration: none;
 }
@@ -161,7 +180,7 @@ footer {
     height: auto;
     border-radius: 50%; 
     object-fit: cover; 
-    border: 5px solid var(--color-primary); /* Orange Border */
+    border: 5px solid var(--color-primary);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -178,7 +197,7 @@ footer {
 }
 
 .skill-category h3 {
-    color: var(--color-dark-base); /* Dark Navy Blue for category title */
+    color: var(--color-dark-base);
     font-size: 1.2em;
     border-bottom: 1px solid #ecf0f1;
     padding-bottom: 5px;
@@ -198,30 +217,60 @@ footer {
     font-size: 0.95em;
 }
 
-@media (max-width: 768px) {
-    .profile-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .profile-image-wrapper {
-        width: 180px;
-        margin-bottom: 20px;
-    }
+/* 9. Portfolio Page Styles (Full Grid) */
 
-    .skills-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .skill-category ul {
-        display: inline-block;
-        text-align: left; 
-    }
+/* CSS Grid Layout for portfolio.html */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    margin-top: 50px;
 }
-/* 10. Contact Page Styles */
 
+/* Individual Project Card Styling */
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #ecf0f1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    width: 100%;
+    /* FIX: Image Height Reduced to 150px */
+    height: 150px; 
+    object-fit: cover;
+    display: block;
+}
+
+.card-details {
+    padding: 20px;
+}
+
+.card-details h3 {
+    font-size: 1.4em;
+    color: var(--color-dark-base);
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-bottom: none;
+}
+
+.tags {
+    font-size: 0.85em;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* 10. Contact Page Styles */
 .contact-details {
     margin-bottom: 50px;
 }
@@ -266,7 +315,7 @@ footer {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Includes padding in the element's total width and height */
+    box-sizing: border-box;
     font-family: inherit;
     font-size: 1em;
     transition: border-color 0.3s ease;
@@ -274,22 +323,21 @@ footer {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: var(--color-primary); /* Orange focus border */
+    border-color: var(--color-primary);
     outline: none;
 }
 
-/* Adjust button spacing to look good with the form */
 .contact-form .btn {
-    width: auto; /* Allow the button to size based on padding */
+    width: 100%; /* Make button fill form width */
     cursor: pointer;
     font-size: 1.1em;
     padding: 12px 30px;
-    display: block; /* Make the button fill the form width */
+    display: block;
     text-align: center;
 }
-/* CSS for the new Hero and Featured Project Layouts */
 
-/* Styling for the new Hero Image */
+/* 11. Homepage Specific Styles */
+
 .hero-image {
     max-width: 100%;
     height: auto;
@@ -297,16 +345,13 @@ footer {
     display: block;
 }
 
-/* Style for the CTA Button (General button styling from Portfolio section) */
 .btn.hero-btn {
-    display: inline-block;
     padding: 15px 35px;
     margin-top: 20px;
     font-size: 1.2em;
     font-weight: 700;
 }
 
-/* Container for the 3 Featured Project Cards */
 .featured-projects-grid {
     display: grid;
     /* Two columns for quick preview on large screens */
@@ -316,17 +361,16 @@ footer {
     text-align: left;
 }
 
-/* Final Call to Action Section */
 .final-cta {
     margin-top: 80px;
     padding: 40px 20px;
-    background-color: #fcfcfc; /* Slightly off-white background */
+    background-color: #fcfcfc;
     border-radius: 8px;
     border: 1px solid #eee;
 }
 
 .final-cta h2 {
-    color: var(--color-dark-base); /* Match Navbar/Project Title color */
+    color: var(--color-dark-base);
     border-bottom: none;
     margin-top: 0;
 }
@@ -335,8 +379,33 @@ footer {
     font-size: 1.1em;
 }
 
+/* 12. Media Queries (Responsiveness) */
+
 @media (max-width: 768px) {
-    /* Stack projects into a single column on smaller phones */
+    /* About Page */
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-image-wrapper {
+        width: 180px;
+        margin-bottom: 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .skill-category ul {
+        display: inline-block;
+        text-align: left; 
+    }
+    
+    /* Portfolio/Homepage Grids */
+    .project-grid, 
     .featured-projects-grid {
         grid-template-columns: 1fr;
     }
