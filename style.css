@@ -287,3 +287,57 @@ footer {
     display: block; /* Make the button fill the form width */
     text-align: center;
 }
+/* CSS for the new Hero and Featured Project Layouts */
+
+/* Styling for the new Hero Image */
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin: 40px auto 0;
+    display: block;
+}
+
+/* Style for the CTA Button (General button styling from Portfolio section) */
+.btn.hero-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+/* Container for the 3 Featured Project Cards */
+.featured-projects-grid {
+    display: grid;
+    /* Two columns for quick preview on large screens */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* Final Call to Action Section */
+.final-cta {
+    margin-top: 80px;
+    padding: 40px 20px;
+    background-color: #fcfcfc; /* Slightly off-white background */
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.final-cta h2 {
+    color: var(--color-dark-base); /* Match Navbar/Project Title color */
+    border-bottom: none;
+    margin-top: 0;
+}
+
+.final-cta p {
+    font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+    /* Stack projects into a single column on smaller phones */
+    .featured-projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
