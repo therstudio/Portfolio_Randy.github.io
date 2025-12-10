@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <h1 class="title">Hello, I'm a Digital Design & Development Student</h1>
+        <p class="subtitle">I design, build, and create digital experiences.</p>
+
+        <a class="btn" href="#projects">View My Work</a>
+    </header>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            I am a Polytechnic student studying Digital Design & Development. 
+            I enjoy UI/UX design, front-end development, and creating meaningful digital products.
+        </p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+
+        <div class="card" onclick="openProject('project1')">
+            <h3>UI/UX App Design</h3>
+            <p>Mobile app prototype created with Figma.</p>
+        </div>
+
+        <div class="card" onclick="openProject('project2')">
+            <h3>Website Development</h3>
+            <p>Responsive website built with HTML and CSS.</p>
+        </div>
+
+        <div class="card" onclick="openProject('project3')">
+            <h3>Branding Project</h3>
+            <p>Complete branding guide for a mock business.</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: myemail@example.com</p>
+        <p>GitHub: github.com/myusername</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
