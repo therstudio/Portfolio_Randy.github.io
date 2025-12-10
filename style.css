@@ -166,3 +166,100 @@ footer {
     border-radius: 4px;
     text-decoration: none; /* Remove underline on hover for a cleaner look */
 }
+/* style.css */
+
+/* -------------------- */
+/* 8. About Page Specific Styles (NEW) */
+/* -------------------- */
+
+/* --- Profile Section Styling --- */
+
+/* Use Flexbox to align photo and summary side-by-side */
+.profile-section {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 40px; /* Space between the photo and the text */
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+/* Style for the Photo Wrapper */
+.profile-image-wrapper {
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    width: 250px; /* Set a fixed size for the image container */
+}
+
+/* Style for the Photo */
+.profile-photo {
+    width: 100%; /* Make the image fill its wrapper */
+    height: auto;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border: 5px solid #3498db; /* Blue border for emphasis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the summary text takes up the rest of the space */
+.profile-summary {
+    flex-grow: 1;
+}
+
+/* --- Skills Section Styling --- */
+
+/* Use CSS Grid to organize skill lists into columns */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+    gap: 30px;
+    margin-top: 30px;
+    text-align: left; /* Align skill lists to the left */
+}
+
+.skill-category h3 {
+    color: #2c3e50; /* Dark navy color for category title */
+    font-size: 1.2em;
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.skill-category ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category li {
+    padding: 5px 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* Media Query for Responsiveness (IMPORTANT for mobile) */
+@media (max-width: 768px) {
+    /* Stack the photo and summary vertically on small screens */
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Reduce the photo size on small screens */
+    .profile-image-wrapper {
+        width: 180px;
+        margin-bottom: 20px;
+    }
+
+    /* Stack the skill columns vertically on small screens */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        text-align: center; /* Center the skill categories */
+    }
+    
+    /* Re-center the skill list items */
+    .skill-category ul {
+        display: inline-block; /* Allows the ul to center itself */
+        text-align: left; 
+    }
+}
