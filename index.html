@@ -14,48 +14,64 @@
             <li><a href="about.html">About Me</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="contact.html">Contact</a></li>
-            </ul>
+        </ul>
     </nav>
     <div class="container">
 
         <header>
             <h1>Hey! I'm a Digital Design & Development Student</h1>
             <p class="tagline">I design, build, and create digital experiences.</p>
+            
+            <a href="portfolio.html" class="btn hero-btn">View My Portfolio</a>
+            
+            <img src="hero-graphic.png" alt="Digital Design Illustration" class="hero-image">
         </header>
-
         <section id="about">
             <h2>About Me</h2>
             <p>I am a Polytechnic student studying Digital Design & Development. I enjoy UI/UX design, front-end development, and creating meaningful digital products.</p>
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
+            <h2>Featured Work</h2> <div class="featured-projects-grid"> <div class="project-card featured-card">
+                    <a href="work1.html">
+                        <img src="thumb-work1.jpg" alt="Website Development Thumbnail" class="project-image">
+                    </a>
+                    <div class="card-details">
+                        <h3>Website Development</h3>
+                        <p class="tags">#HTML #CSS #RWD</p>
+                        <a href="work1.html" class="btn">View Case Study</a>
+                    </div>
+                </div>
 
-            <div class="project-item">
-                <a href="portfolio.html" class="project-title">UI/UX App Design</a>
-                <p class="project-description">E-Commerce website prototype created with Figma.</p>
-            </div>
+                <div class="project-card featured-card">
+                    <a href="portfolio.html">
+                        <img src="thumb-work2.jpg" alt="UI/UX App Design Thumbnail" class="project-image">
+                    </a>
+                    <div class="card-details">
+                        <h3>UI/UX App Design</h3>
+                        <p class="tags">#Figma #Prototyping</p>
+                        <a href="portfolio.html" class="btn">View Case Study</a>
+                    </div>
+                </div>
 
-            <div class="project-item">
-                <a href="work1.html" class="project-title">Website Development</a>
-                <p class="project-description">Responsive website built with HTML and CSS.</p>
-            </div>
-
-            <div class="project-item">
-                <a href="portfolio.html" class="project-title">Branding Project</a>
-                <p class="project-description">Complete branding guide for a mock business.</p>
-            </div>
+                <div class="project-card featured-card">
+                    <a href="portfolio.html">
+                        <img src="thumb-work3.jpg" alt="Branding Project Thumbnail" class="project-image">
+                    </a>
+                    <div class="card-details">
+                        <h3>Branding Project</h3>
+                        <p class="tags">#Branding #Typography</p>
+                        <a href="portfolio.html" class="btn">View Case Study</a>
+                    </div>
+                </div>
             
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p>Email: <a href="mailto:therstudiorandy@gmail.com">therstudiorandy@gmail.com</a></p>
-                <p>Github: <a href="https://github.com/therstudio" target="_blank">github.com/therstudio</a></p>
             </div>
         </section>
-
+        <section class="final-cta">
+            <h2>Ready to start a project?</h2>
+            <p>I'm available for freelance work and full-time opportunities.</p>
+            <a href="contact.html" class="btn hero-btn">Get In Touch</a>
+        </section>
         <footer>
             <p>&copy; 2025 Randy. All rights reserved.</p>
         </footer>

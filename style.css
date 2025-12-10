@@ -220,3 +220,70 @@ footer {
         text-align: left; 
     }
 }
+/* 10. Contact Page Styles */
+
+.contact-details {
+    margin-bottom: 50px;
+}
+
+.contact-links {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.contact-links strong {
+    color: var(--color-dark-base);
+    margin-right: 10px;
+}
+
+/* Form Styling */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-dark-base);
+    font-size: 1em;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
+    font-family: inherit;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-primary); /* Orange focus border */
+    outline: none;
+}
+
+/* Adjust button spacing to look good with the form */
+.contact-form .btn {
+    width: auto; /* Allow the button to size based on padding */
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 12px 30px;
+    display: block; /* Make the button fill the form width */
+    text-align: center;
+}
