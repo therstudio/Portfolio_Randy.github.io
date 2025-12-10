@@ -166,7 +166,6 @@ footer {
     border-radius: 4px;
     text-decoration: none; /* Remove underline on hover for a cleaner look */
 }
-/* style.css */
 
 /* -------------------- */
 /* 8. About Page Specific Styles (NEW) */
@@ -186,18 +185,20 @@ footer {
 /* Style for the Photo Wrapper */
 .profile-image-wrapper {
     flex-shrink: 0; /* Prevents the image from shrinking */
-    width: 250px; /* Set a fixed size for the image container */
+    width: 180px; /* Set a fixed size for the image container */
 }
 
 /* Style for the Photo */
+/* Update this rule in your style.css file */
 .profile-photo {
-    width: 100%; /* Make the image fill its wrapper */
+    width: 100%;
     height: auto;
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border: 5px solid #3498db; /* Blue border for emphasis */
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 5px solid #bdc3c7; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Ensure the summary text takes up the rest of the space */
 .profile-summary {
