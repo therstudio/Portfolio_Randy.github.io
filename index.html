@@ -3,80 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Randy's Digital Design Portfolio</title>
+    <title>Randy | Digital Design Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="container">
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 
-        <header>
-            <h1>Hey! I'm a Digital Design & Development Student</h1>
-            <p class="tagline">I design, build, and create digital experiences.</p>
-            
-            <a href="portfolio.html" class="btn hero-btn">View My Portfolio</a>
-            
-            <img src="hero-graphic.png" alt="Digital Design Illustration" class="hero-image">
-        </header>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a Polytechnic student studying Digital Design & Development. I enjoy UI/UX design, front-end development, and creating meaningful digital products.</p>
-        </section>
+<div class="container">
+    <header class="fade-up">
+        <h1>Hey! I'm a Digital Design & Development Student</h1>
+        <p class="tagline">I design, build, and create digital experiences.</p>
+        <a href="portfolio.html" class="btn">View My Portfolio</a>
+    </header>
 
-        <section id="projects">
-            <h2>Featured Work</h2> <div class="featured-projects-grid"> <div class="project-card featured-card">
-                    <a href="work1.html">
-                        <img src="assets\E-com_WebDesign.png" alt="Website Development Thumbnail" class="project-image">
-                    </a>
-                    <div class="card-details">
-                        <h3>UI/UX Web Design: E-Commerce sustainable Clothing Site</h3>
-                        <p class="tags">-Figma -UI/UX -Prototyping</p>
-                        <a href="work1.html" class="btn">View Case Study</a>
-                    </div>
+    <section id="projects" class="fade-up">
+        <h2>Featured Work</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <a href="work1.html">
+                    <img src="assets/E-com_WebDesign.png" alt="E-commerce project">
+                </a>
+                <div class="card-details">
+                    <h3>Sustainable Clothing Site</h3>
+                    <p>Figma | UI/UX</p>
+                    <a href="work1.html" class="btn">Case Study</a>
                 </div>
-
-                <div class="project-card featured-card">
-                    <a href="portfolio.html">
-                        <img src="assets\VR Game.png" alt="VR Game Thumbnail" class="project-image">
-                    </a>
-                    <div class="card-details">
-                        <h3>VR Murder Mystery Escape Room</h3>
-                        <p class="tags">-C# -Unity</p>
-                        <a href="portfolio.html" class="btn">View Case Study</a>
-                    </div>
-                </div>
-
-                <div class="project-card featured-card">
-                    <a href="portfolio.html">
-                        <img src="thumb-work3.jpg" alt="Responsive Medical Website Thumbnail" class="project-image">
-                    </a>
-                    <div class="card-details">
-                        <h3>Responsive Medical Website</h3>
-                        <p class="tags">-HTML -CSS -Javascript</p>
-                        <a href="portfolio.html" class="btn">View Case Study</a>
-                    </div>
-                </div>
-            
             </div>
-        </section>
-        <section class="final-cta">
-            <h2>Ready to start a project?</h2>
-            <p>I'm available for freelance work and full-time opportunities.</p>
-            <a href="contact.html" class="btn hero-btn">Get In Touch</a>
-        </section>
-        <footer>
-            <p>&copy; 2025 Randy. All rights reserved.</p>
-        </footer>
+            <div class="project-card">
+                <a href="work2.html">
+                    <img src="assets/VR Game.png" alt="VR Game">
+                </a>
+                <div class="card-details">
+                    <h3>VR Murder Mystery</h3>
+                    <p>Unity | C#</p>
+                    <a href="work2.html" class="btn">Case Study</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <a href="work3.html">
+                    <img src="assets/secondaid.jpeg" alt="Medical Site">
+                </a>
+                <div class="card-details">
+                    <h3>Medical Website</h3>
+                    <p>HTML | CSS | JS</p>
+                    <a href="work3.html" class="btn">Case Study</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
-    
+    <footer class="fade-up">
+        <p>&copy; 2026 Randy. All rights reserved.</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
