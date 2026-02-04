@@ -1,142 +1,71 @@
-/* 1. Global Reset & Body */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+/* 1. Root Colors */
 :root {
-    --color-primary: #FF8400;   /* Vibrant Orange - Highlight, links, hover */
-    --color-secondary: #007BFF; /* Bright Blue - Main headings, key text */
-    --color-dark-base: #004488; /* Dark Navy Blue - Navbar background, project titles */
-    --color-light-bg: #f4f7f6;
-    --color-text: #333;
+    --color-primary: #e10600;      /* Red */
+    --color-secondary: #ffffff;    /* White */
+    --color-dark-base: #000000;    /* Black */
+    --color-light-bg: #111111;
+    --color-text: #ffffff;
 }
 
+/* 2. Body */
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0; 
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
     padding: 0;
-    background-color: var(--color-light-bg);
-    color: var(--color-text);
+    background-color: var(--color-dark-base);
+    color: var(--color-secondary);
     text-align: center;
 }
 
-/* 2. Layout Container */
+/* 3. Container */
 .container {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 40px;
-    background-color: #ffffff;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 70px;
+    background-color: #0e0e0e;
+    border-radius: 0;
 }
 
-/* 3. Typography & Headings */
+/* 4. Typography */
 h1 {
-    font-size: 3em; 
-    color: var(--color-secondary); /* Bright Blue */
-    margin-bottom: 0.1em;
+    font-size: 4em;
     font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--color-secondary);
+    letter-spacing: -1px;
 }
 
 .tagline {
-    font-size: 1.2em;
-    color: #7f8c8d;
-    margin-top: 0;
-    margin-bottom: 50px;
+    font-size: 1.3em;
+    color: #aaa;
+    margin-bottom: 20px;
 }
 
 h2 {
     font-size: 2em;
-    color: var(--color-primary); /* Vibrant Orange for section headers */
-    border-bottom: 2px solid #ecf0f1;
-    padding-bottom: 10px;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-p {
-    margin-bottom: 1.5em;
-}
-
-/* 4. Links and Interactivity */
-a {
-    color: var(--color-primary); /* Links are Orange */
-    text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-a:hover {
-    color: #cc6a00; /* Darker Orange on hover */
-    text-decoration: underline;
-}
-
-/* --- General Button Styling --- */
-.btn {
-    display: inline-block;
-    background-color: var(--color-primary); /* Orange button background */
-    color: #ffffff !important; /* Ensure white text on button */
-    padding: 10px 15px;
-    margin-top: 10px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #cc6a00; /* Darker Orange on hover */
-    text-decoration: none;
-}
-
-/* 5. Projects Section (Old homepage styles - kept for structure) */
-.project-item {
-    margin: 25px 0;
-    padding: 15px 0;
-}
-
-.project-title {
-    display: block;
-    font-size: 1.3em;
-    font-weight: 600;
-    color: var(--color-dark-base);
-    margin-bottom: 5px;
-}
-
-.project-description {
-    color: #555;
-    font-size: 1em;
-    margin-top: 0;
-}
-
-.project-item a.project-title:hover {
-    text-decoration: none;
     color: var(--color-primary);
+    margin-top: 80px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* 6. Footer */
-footer {
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 1px solid #ecf0f1;
-    font-size: 0.85em;
-    color: #95a5a6;
-}
-
-/* 7. Navigation Bar */
+/* 5. Navbar */
 .navbar {
-    background-color: var(--color-dark-base);
-    padding: 15px 0;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: black;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar ul {
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     max-width: 900px;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
 }
@@ -146,267 +75,107 @@ footer {
 }
 
 .navbar a {
-    color: #ffffff;
-    text-decoration: none;
+    color: white;
     font-weight: 600;
     font-size: 1.1em;
-    padding: 5px 10px;
-    transition: background-color 0.3s ease;
+    padding: 6px 12px;
+    transition: color 0.2s ease;
 }
 
 .navbar a:hover {
-    color: #ffffff;
-    background-color: var(--color-primary);
-    border-radius: 4px;
-    text-decoration: none;
+    color: var(--color-primary);
 }
 
-/* 8. About Page Specific Styles */
+/* 6. Hero */
+.hero-desc {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.2em;
+    color: #ddd;
+}
+
+/* 7. Profile */
 .profile-section {
     display: flex;
-    align-items: flex-start;
-    gap: 40px;
+    gap: 50px;
     text-align: left;
     margin-bottom: 50px;
 }
 
 .profile-image-wrapper {
+    width: 200px;
     flex-shrink: 0;
-    width: 180px;
 }
 
 .profile-photo {
     width: 100%;
-    height: auto;
-    border-radius: 50%; 
-    object-fit: cover; 
+    border-radius: 50%;
     border: 5px solid var(--color-primary);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(225,6,0,0.5);
 }
 
-.profile-summary {
-    flex-grow: 1;
-}
-
+/* 8. Skills */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-top: 30px;
+}
+
+.skill-category {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
     text-align: left;
 }
 
 .skill-category h3 {
-    color: var(--color-dark-base);
-    font-size: 1.2em;
-    border-bottom: 1px solid #ecf0f1;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    font-weight: 700;
+    color: var(--color-primary);
 }
 
 .skill-category ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    color: #ccc;
 }
 
-.skill-category li {
-    padding: 5px 0;
-    color: #555;
-    font-size: 0.95em;
+/* 9. Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
 }
 
-/* 9. Portfolio Page Styles (Full Grid) */
-
-/* CSS Grid Layout for portfolio.html */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 30px;
-    margin-top: 50px;
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Individual Project Card Styling */
-.project-card {
-    background-color: #ffffff;
-    border: 1px solid #ecf0f1;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
+/* 10. Footer */
+footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #888;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.project-image {
-    width: 100%;
-    /* FIX: Image Height Reduced to 150px */
-    height: 150px; 
-    object-fit: cover;
-    display: block;
-}
-
-.card-details {
-    padding: 20px;
-}
-
-.card-details h3 {
-    font-size: 1.4em;
-    color: var(--color-dark-base);
-    margin-top: 0;
-    margin-bottom: 5px;
-    border-bottom: none;
-}
-
-.tags {
-    font-size: 0.85em;
-    color: var(--color-primary);
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-/* 10. Contact Page Styles */
-.contact-details {
-    margin-bottom: 50px;
-}
-
-.contact-links {
-    font-size: 1.1em;
-    line-height: 1.8;
-}
-
-.contact-links strong {
-    color: var(--color-dark-base);
-    margin-right: 10px;
-}
-
-/* Form Styling */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #fcfcfc;
-    border-radius: 8px;
-    border: 1px solid #eee;
-    text-align: left;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.contact-form label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--color-dark-base);
-    font-size: 1em;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-family: inherit;
-    font-size: 1em;
-    transition: border-color 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--color-primary);
-    outline: none;
-}
-
-.contact-form .btn {
-    width: 100%; /* Make button fill form width */
-    cursor: pointer;
-    font-size: 1.1em;
-    padding: 12px 30px;
-    display: block;
-    text-align: center;
-}
-
-/* 11. Homepage Specific Styles */
-
-.hero-image {
-    max-width: 100%;
-    height: auto;
-    margin: 40px auto 0;
-    display: block;
-}
-
-.btn.hero-btn {
-    padding: 15px 35px;
-    margin-top: 20px;
-    font-size: 1.2em;
-    font-weight: 700;
-}
-
-.featured-projects-grid {
-    display: grid;
-    /* Two columns for quick preview on large screens */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 30px;
-    margin-top: 30px;
-    text-align: left;
-}
-
-.final-cta {
-    margin-top: 80px;
-    padding: 40px 20px;
-    background-color: #fcfcfc;
-    border-radius: 8px;
-    border: 1px solid #eee;
-}
-
-.final-cta h2 {
-    color: var(--color-dark-base);
-    border-bottom: none;
-    margin-top: 0;
-}
-
-.final-cta p {
-    font-size: 1.1em;
-}
-
-/* 12. Media Queries (Responsiveness) */
-
+/* 11. Mobile */
 @media (max-width: 768px) {
-    /* About Page */
     .profile-section {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    
-    .profile-image-wrapper {
-        width: 180px;
-        margin-bottom: 20px;
-    }
 
     .skills-grid {
         grid-template-columns: 1fr;
-        text-align: center;
     }
-    
-    .skill-category ul {
-        display: inline-block;
-        text-align: left; 
-    }
-    
-    /* Portfolio/Homepage Grids */
-    .project-grid, 
-    .featured-projects-grid {
-        grid-template-columns: 1fr;
+
+    .container {
+        padding: 50px 25px;
     }
 }
