@@ -24,8 +24,9 @@ body {
     padding: 40px 20px;
 }
 
-h1 { font-size: 3.5em; font-weight: 800; text-align: center; color: var(--color-secondary); }
+h1 { font-size: 3.5em; font-weight: 800; text-align: center; color: var(--color-secondary); margin-bottom: 10px; }
 h2 { font-size: 2em; color: var(--color-primary); text-align: center; margin: 60px 0 30px; text-transform: uppercase; }
+.tagline { font-size: 1.3em; color: #aaa; text-align: center; margin-bottom: 20px; }
 
 /* --- Navbar --- */
 .navbar { 
@@ -48,17 +49,18 @@ h2 { font-size: 2em; color: var(--color-primary); text-align: center; margin: 60
 .navbar a { color: white; text-decoration: none; font-weight: 600; transition: 0.3s; }
 .navbar a:hover { color: var(--color-primary); }
 
-/* --- Profile Section (About Me Fix) --- */
+/* --- Profile Section (About Me) --- */
 .profile-section { 
     display: flex; 
     gap: 40px; 
     align-items: flex-start;
     margin-bottom: 80px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .profile-image-wrapper { 
-    flex: 0 0 350px; /* Fixed width for your photo */
+    flex: 0 0 350px; 
     max-width: 350px;
 }
 
@@ -69,23 +71,24 @@ h2 { font-size: 2em; color: var(--color-primary); text-align: center; margin: 60
     border: 2px solid var(--color-primary);
 }
 
-.profile-summary { flex: 1; min-width: 300px; }
+.profile-summary { flex: 1; min-width: 300px; text-align: left; }
 .profile-summary p { margin-bottom: 20px; font-size: 1.1rem; color: #ccc; }
 
-/* --- Core Skills (The Card Fix) --- */
+/* --- Core Skills (THE CARD FIX) --- */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Forces side-by-side */
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Pulls them side-by-side */
+    gap: 25px;
     margin-top: 40px;
 }
 
 .skill-category {
-    background: #111;
+    background: #111; /* Card Background */
     padding: 30px;
     border-radius: 12px;
-    border: 1px solid #222;
-    transition: 0.3s;
+    border: 1px solid #222; /* Card Border */
+    transition: 0.3s ease;
+    text-align: center;
 }
 
 .skill-category:hover {
@@ -95,24 +98,29 @@ h2 { font-size: 2em; color: var(--color-primary); text-align: center; margin: 60
 
 .skill-category h3 {
     color: var(--color-primary);
+    font-size: 1.3rem;
     margin-bottom: 20px;
-    text-align: center;
+    text-transform: uppercase;
 }
 
 .skill-category ul {
     list-style: none; /* Removes those floating bullets */
     padding: 0;
     margin: 0;
-    text-align: center;
 }
 
 .skill-category li {
-    padding: 5px 0;
+    padding: 8px 0;
     font-size: 1rem;
     color: #eee;
+    border-bottom: 1px solid #222; /* Adds a subtle divider line */
 }
 
-/* --- Project & Cert Cards (Matches Skills) --- */
+.skill-category li:last-child {
+    border-bottom: none;
+}
+
+/* --- Project & Cert Cards --- */
 .project-grid, .cert-grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -127,9 +135,9 @@ h2 { font-size: 2em; color: var(--color-primary); text-align: center; margin: 60
     text-decoration: none;
     color: white;
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
 }
-
-.project-card:hover, .cert-card:hover { border-color: var(--color-primary); }
 
 .project-card img { 
     width: 100%; 
@@ -139,8 +147,12 @@ h2 { font-size: 2em; color: var(--color-primary); text-align: center; margin: 60
 
 .card-details { padding: 20px; }
 
+/* --- Footer --- */
+footer { margin-top: 60px; padding: 40px; color: #666; text-align: center; }
+
 /* --- Mobile Responsive --- */
-@media (max-width: 900px) {
-    .skills-grid { grid-template-columns: 1fr; }
+@media (max-width: 950px) {
+    .skills-grid { grid-template-columns: 1fr; } /* Stack cards on mobile */
     .profile-section { flex-direction: column; align-items: center; text-align: center; }
+    .profile-summary { text-align: center; }
 }
