@@ -1,140 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Me | Randy</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Randy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo"> </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-spacer"></div>
+    </nav>
 
-<div class="container">
+    <div class="container">
 
-    <!-- Hero Section -->
-    <header class="hero fade-up">
-        <h1>Hi, I’m Randy</h1>
-        <p class="tagline">Digital Design & Development Student</p>
-        <p class="hero-desc">
-            I build clean, user-friendly digital experiences combining creative design with code.
-        </p>
-    </header>
-
-    <!-- Profile Section -->
-    <section class="profile-section fade-up">
-        <div class="profile-image-wrapper">
-            <img src="assets/AboutmePhoto.jpg" alt="Photo of Randy" class="profile-photo">
-        </div>
-        <div class="profile-summary">
-            <p>
-                I’m a Polytechnic student specializing in Digital Design and Development. I enjoy crafting intuitive interfaces in Figma and implementing responsive layouts with HTML, CSS, and JavaScript.
+        <header class="hero fade-up">
+            <h1>Hi, I’m Randy</h1>
+            <p class="tagline">Digital Design & Development Student</p>
+            <p class="hero-desc">
+                I build clean, user-friendly digital experiences combining creative design with code.
             </p>
+        </header>
+
+        <section class="profile-section fade-up">
+            <div class="profile-image-wrapper">
+                <img src="assets/AboutmePhoto.jpg" alt="Photo of Randy" class="profile-photo">
+            </div>
+            <div class="profile-summary">
+                <p>
+                    I’m a Polytechnic student specializing in Digital Design and Development. I enjoy crafting intuitive interfaces in Figma and implementing responsive layouts with HTML, CSS, and JavaScript.
+                </p>
+                <p>
+                    I also have experience in Unity game development and version control using GitHub. Outside of tech, I’m a gamer and part-time DJ, which helps sharpen my creativity and teamwork skills.
+                </p>
+                <p>
+                    I’m looking for opportunities to grow as a developer while contributing to meaningful projects.
+                </p>
+            </div>
+        </section>
+
+        <section class="skills-section fade-up">
+            <h2>Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Development</h3>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Web Design</li>
+                        <li>Git & GitHub</li>
+                        <li>Unity</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Design & Tools</h3>
+                    <ul>
+                        <li>Figma & Adobe XD</li>
+                        <li>Photoshop & Illustrator</li>
+                        <li>VS Code</li>
+                        <li>UX Research</li>
+                        <li>Wireframing & Prototyping</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Professional Skills</h3>
+                    <ul>
+                        <li>Problem Solving</li>
+                        <li>Team Collaboration</li>
+                        <li>Attention to Detail</li>
+                        <li>Time Management</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="certificates-section fade-up">
+            <h2>Certifications</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <div class="card-details">
+                        <p style="color: var(--color-primary); font-weight: bold; margin-bottom: 5px;">Linkedin</p>
+                        <h3>Software Testing Assistance with GitHub Copilot AI</h3>
+                        <p style="color: #888; font-size: 0.9rem; margin-bottom: 15px;">Issued Feb 2026</p>
+                        <a href="https://www.linkedin.com.mcas.ms/learning/certificates/5e45fbe21ab88905d1e5e3b1a1d3fe09a1a018c9ca3c7f0a364b0a7a497ced9d?u=41614228" target="_blank" class="btn">View Credentials</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-details">
+                        <p style="color: var(--color-primary); font-weight: bold; margin-bottom: 5px;">Linkedin</p>
+                        <h3>Building Modern UIs with React Router v6</h3>
+                        <p style="color: #888; font-size: 0.9rem; margin-bottom: 15px;">Issued Jan 2026</p>
+                        <a href="https://www.linkedin.com.mcas.ms/learning/certificates/199e209b9cbf4491eb32a815c4f4b3715b70e82bc53a94434b81d02f4b6efac1?u=41614228" target="_blank" class="btn">View Credentials</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-details">
+                        <p style="color: var(--color-primary); font-weight: bold; margin-bottom: 5px;">LinkedIn</p>
+                        <h3>Python Automation and Testing</h3>
+                        <p style="color: #888; font-size: 0.9rem; margin-bottom: 15px;">Issued jan 2026</p>
+                        <a href="https://www.linkedin.com.mcas.ms/learning/certificates/4d8efc7d4982c020704b8d8227d66e472e2d702911090b524a07b917614d6c35?u=41614228" target="_blank" class="btn">View Credentials</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="fade-up" style="margin-top: 60px;">
+            <h2>Beyond Code</h2>
             <p>
-                I also have experience in Unity game development and version control using GitHub. Outside of tech, I’m a gamer and part-time DJ, which helps sharpen my creativity and teamwork skills.
+                Gamer. Part-time DJ. Creative thinker. I enjoy blending music, design, and technology to build engaging digital experiences.
             </p>
-            <p>
-                I’m looking for opportunities to grow as a developer while contributing to meaningful projects.
-            </p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section class="skills-section fade-up">
-        <h2>Core Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Development</h3>
-                <ul>
-                    <li>HTML5 & CSS3</li>
-                    <li>JavaScript</li>
-                    <li>Responsive Web Design</li>
-                    <li>Git & GitHub</li>
-                    <li>Unity</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <h3>Design & Tools</h3>
-                <ul>
-                    <li>Figma & Adobe XD</li>
-                    <li>Photoshop & Illustrator</li>
-                    <li>VS Code</li>
-                    <li>UX Research</li>
-                    <li>Wireframing & Prototyping</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <h3>Professional Skills</h3>
-                <ul>
-                    <li>Problem Solving</li>
-                    <li>Team Collaboration</li>
-                    <li>Attention to Detail</li>
-                    <li>Time Management</li>
-                    <li>Adaptability</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-<section class="certificates-section fade-up">
-    <h2>Certifications</h2>
-    <div class="cert-grid">
-        
-        <a href="INSERT_LINK_HERE" target="_blank" class="cert-card">
-            <div>
-                <p class="cert-issuer">Google</p>
-                <h3>UX Design Professional Certificate</h3>
-                <p class="cert-date">Issued Jan 2026</p>
-            </div>
-            <span class="cert-link-text">View Credentials</span>
-        </a>
-
-        <a href="INSERT_LINK_HERE" target="_blank" class="cert-card">
-            <div>
-                <p class="cert-issuer">Unity Technologies</p>
-                <h3>Junior Programmer Certification</h3>
-                <p class="cert-date">Issued Dec 2025</p>
-            </div>
-            <span class="cert-link-text">View Credentials</span>
-        </a>
-
-        <a href="INSERT_LINK_HERE" target="_blank" class="cert-card">
-            <div>
-                <p class="cert-issuer">Coursera</p>
-                <h3>Advanced CSS & Sass</h3>
-                <p class="cert-date">Issued Oct 2025</p>
-            </div>
-            <span class="cert-link-text">View Credentials</span>
-        </a>
+        <footer class="fade-up">
+            <p>&copy; 2026 Randy. All rights reserved.</p>
+        </footer>
 
     </div>
-</section>
 
-    <!-- Beyond Code -->
-    <section class="fade-up">
-        <h2>Beyond Code</h2>
-        <p>
-            Gamer. Part-time DJ. Creative thinker. I enjoy blending music, design, and technology to build engaging digital experiences.
-        </p>
-    </section>
-
-    <!-- Footer -->
-    <footer class="fade-up">
-        <p>&copy; 2026 Randy. All rights reserved.</p>
-    </footer>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

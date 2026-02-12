@@ -1,110 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project Detail | Randy</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail | Randy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-<!-- Main Container -->
-<div class="container">
-
-    <!-- Header -->
-    <header class="fade-up">
-        <h1>Vaulty</h1>
-        <p class="tagline">Itinerary planner/tracker mobile App</p>
-    </header>
-
-    <!-- Project Overview -->
-    <section class="profile-section fade-up">
-        <div class="profile-image-wrapper">
-            <img src="assets\Itiplanner.png" alt="Project Hero Image" class="project-hero-img">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
         </div>
-        <div class="profile-summary">
-            <h2>Overview</h2>
-            <p>TripMaster is a centralized travel management application designed to organize itineraries and finances into a clean, card-based dashboard. It allows users to track current activities, such as hotel check-ins, while monitoring a dynamic "Total Trip Budget" via a live progress bar. The app also organizes sequential travel events, like return flights and local excursions, with quick-action buttons for real-time updates.</p>
-            <p><strong>The Goal:</strong>The primary goal is to reduce travel-related stress by combining schedule tracking and financial management in one place. By providing a clear roadmap of both time-sensitive plans and remaining funds, the app helps travelers stay organized and within their budget throughout their journey.</p>
-            <div class="cta-area">
-                <a href="https://www.figma.com/design/hFLwmo9hIpdnMkmklLOd14/FA?node-id=2-2&t=CgagIvW1IHzINHfQ-1" class="contact-btn">View Live Demo</a>
-            </div>
-        </div>
-    </section>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-spacer"></div>
+    </nav>
 
-    <!-- Project Breakdown -->
-    <section class="skills-section fade-up">
-        <h2>Project Breakdown</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Role & Tech</h3>
-                <ul>
-                    <li>JavaScript</li>
-                    <li>Technical Architect</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Process</h3>
-                <p>I began by architecting a scalable data model for itinerary items, followed by building the core dashboard logic. A critical phase involved developing the AddItem component, where I integrated input validation and a callback system (onActionComplete) to ensure seamless data synchronization between the entry form and the global trip state.</p>
-            </div>
-            <div class="skill-category">
-                <h3>Key Takeaway</h3>
-                <p>I learned the importance of state synchronization in mobile development. By building a functional budget tracker, I discovered that user trust is built through immediate UI feedback—where every added expense or activity instantly updates the application’s state without lag or data loss.</p>
-            </div>
-        </div>
-    </section>
+    <div class="container">
 
-    <!-- Visual Gallery -->
-    <section class="gallery-section fade-up">
-        <h2>Visuals</h2>
-        <div class="gallery-grid">
+        <header class="hero fade-up">
+            <h1>TripMaster</h1>
+            <p class="tagline">Itinerary planner/tracker mobile App</p>
+        </header>
+
+        <section class="profile-section fade-up">
             <div class="profile-image-wrapper">
-                <img src="assets\itiplan\itiplan1.png" alt="Screenshot 1" class="project-hero-img">
+                <img src="assets/Itiplanner.png" alt="Project Hero Image" class="project-hero-img">
             </div>
-            <div class="profile-image-wrapper">
-                <img src="assets\itiplan\itiplan2.png" alt="Screenshot 2" class="project-hero-img">
-            </div>
-        </div>
-    </section>
-
-    <!-- Related Projects -->
-    <section class="related-projects fade-up">
-        <h2>Related Projects</h2>
-        <div class="related-grid">
-            <div class="related-card fade-left">
-                <img src="assets\E-com_WebDesign.png" alt="Project 2">
-                <div class="card-details">
-                    <h3>E-Commerce sustainable Clothing Site</h3>
-                    <a href="work1.htm">View Project</a>
+            <div class="profile-summary">
+                <h2>Overview</h2>
+                <p>TripMaster is a centralized travel management application designed to organize itineraries and finances into a clean, card-based dashboard. It allows users to track current activities, such as hotel check-ins, while monitoring a dynamic "Total Trip Budget" via a live progress bar.</p>
+                <p><strong>The Goal:</strong> The primary goal is to reduce travel-related stress by combining schedule tracking and financial management in one place. By providing a clear roadmap of both time-sensitive plans and remaining funds, the app helps travelers stay organized.</p>
+                <div class="cta-area" style="margin-top: 20px;">
+                    <a href="https://www.figma.com/..." class="btn">View Live Demo</a>
                 </div>
             </div>
-            <div class="related-card fade-left">
-                <img src="assets\VR Game.png" alt="Project 3">
-                <div class="card-details">
-                    <h3>VR Murder Mystery escape room</h3>
-                    <a href="work2.htm">View Project</a>
+        </section>
+
+        <section class="skills-section fade-up">
+            <h2>Project Breakdown</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Role & Tech</h3>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>Technical Architect</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Process</h3>
+                    <p>I began by architecting a scalable data model for itinerary items, followed by building the core dashboard logic. A critical phase involved developing the AddItem component with a callback system to ensure seamless data synchronization.</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Key Takeaway</h3>
+                    <p>I learned the importance of state synchronization. By building a functional budget tracker, I discovered that user trust is built through immediate UI feedback and instant state updates.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="fade-up">
-        <p>&copy; 2026 Randy. All rights reserved.</p>
-    </footer>
+        <section class="gallery-section fade-up">
+            <h2>Visuals</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="assets/itiplan/itiplan1.png" alt="Screenshot 1">
+                </div>
+                <div class="project-card">
+                    <img src="assets/itiplan/itiplan2.png" alt="Screenshot 2">
+                </div>
+            </div>
+        </section>
 
-</div>
+        <section class="related-projects fade-up" style="margin-top: 80px;">
+            <h2>Related Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="assets/E-com_WebDesign.png" alt="Project 2">
+                    <div class="card-details">
+                        <h3>Sustainable Clothing Site</h3>
+                        <a href="work1.html" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/VR Game.png" alt="Project 3">
+                    <div class="card-details">
+                        <h3>VR Murder Mystery</h3>
+                        <a href="work2.html" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<script src="script.js"></script>
+        <footer class="fade-up">
+            <p>&copy; 2026 Randy. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
