@@ -73,7 +73,7 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
     margin-top: 40px; 
 }
 
-/* --- Project Cards (The Fix is Here) --- */
+/* --- Project Cards --- */
 .project-card {
     background: #111;
     border-radius: 12px;
@@ -82,7 +82,7 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
     text-align: left;
     display: flex;
     flex-direction: column;
-    height: 100%; /* Ensures all cards in a row are equal height */
+    height: 100%;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -91,12 +91,11 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
     border-color: var(--color-primary);
 }
 
-/* IMAGE CROP FIX */
 .project-card img { 
     width: 100%; 
-    aspect-ratio: 16 / 10; /* Forces every image to this exact shape */
-    object-fit: cover;     /* Crops the image to fill the space without stretching */
-    object-position: top;  /* Ensures the top of your design is visible */
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top;
     display: block;
     border-bottom: 1px solid #222;
 }
@@ -144,6 +143,37 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
 .cert-issuer { color: var(--color-primary); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 5px; }
 .cert-date { color: #666; font-size: 0.85em; }
 
+/* --- Improved Profile Section (About Me) --- */
+.profile-section { 
+    display: flex; 
+    gap: 50px; 
+    align-items: center; 
+    text-align: left; 
+    margin-bottom: 50px; 
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.profile-image-wrapper { 
+    flex: 1; 
+    min-width: 250px; 
+    max-width: 400px; /* Limits the photo size so it doesn't get huge */
+}
+
+.profile-photo { 
+    width: 100%; 
+    height: auto; 
+    max-height: 500px; 
+    border-radius: 12px; 
+    object-fit: cover; 
+    border: 2px solid var(--color-primary);
+}
+
+.profile-summary { 
+    flex: 2; 
+    min-width: 300px; 
+}
+
 /* --- Buttons --- */
 .btn {
     display: inline-block;
@@ -155,7 +185,7 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
     font-weight: 600;
     text-align: center;
     transition: 0.3s;
-    margin-top: auto; /* Keeps buttons aligned at the bottom */
+    margin-top: auto;
 }
 
 .btn:hover { 
