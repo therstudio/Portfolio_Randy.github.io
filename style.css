@@ -62,7 +62,7 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
 
 .navbar a:hover, .navbar a.active { color: var(--color-primary); }
 
-/* --- Profile Section (About Me Page) --- */
+/* --- Profile Section (About Me) --- */
 .profile-section { 
     display: flex; 
     gap: 50px; 
@@ -74,7 +74,7 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
 }
 
 .profile-image-wrapper { 
-    flex: 0 0 380px; /* Constrains the image size */
+    flex: 0 0 380px; 
     max-width: 380px;
 }
 
@@ -99,19 +99,34 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
     text-align: left;
 }
 
-/* --- Core Skills Grid (FIXED: Side by Side) --- */
+/* --- Core Skills Section (FIXED: Cards Side by Side) --- */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns side-by-side */
+    gap: 25px;
     margin-top: 40px;
-    text-align: center;
+}
+
+.skill-category {
+    background: #111; /* Card Background */
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid #222; /* Card Border */
+    text-align: left; /* Aligns text inside cards to the left */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primary);
 }
 
 .skill-category h3 {
     color: var(--color-primary);
-    font-size: 1.4em;
-    margin-bottom: 15px;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .skill-category ul {
@@ -121,12 +136,23 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
 }
 
 .skill-category li {
-    font-size: 1.05em;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-size: 1rem;
     color: #ddd;
+    position: relative;
+    padding-left: 20px;
 }
 
-/* --- Grid System (Portfolio & Certs) --- */
+/* Adds a small dot/bullet back to the list items */
+.skill-category li::before {
+    content: "•";
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* --- Grid System (Projects & Certs) --- */
 .project-grid, .cert-grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
@@ -160,13 +186,6 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
     display: block;
 }
 
-.card-details { 
-    padding: 25px; 
-    flex-grow: 1; 
-    display: flex; 
-    flex-direction: column;
-}
-
 /* --- Certificates Cards --- */
 .cert-card {
     background: #111;
@@ -187,7 +206,6 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
 }
 
 .cert-issuer { color: var(--color-primary); font-weight: 700; font-size: 0.8em; text-transform: uppercase; }
-.cert-link-text { margin-top: 15px; color: var(--color-primary); font-weight: 600; font-size: 0.9em; }
 
 /* --- Buttons --- */
 .btn {
@@ -216,7 +234,7 @@ footer { margin-top: 60px; padding: 20px; color: #666; font-size: 0.9em; }
 /* --- Responsive Adjustments --- */
 @media (max-width: 900px) {
     .skills-grid {
-        grid-template-columns: 1fr; /* Stacks skills vertically on tablets/phones */
+        grid-template-columns: 1fr; /* Stack cards on mobile */
     }
 }
 
