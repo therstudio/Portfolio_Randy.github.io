@@ -16,16 +16,21 @@ body {
     line-height: 1.6;
 }
 
-/* --- Navbar Fix: Logo Left, Links Right/Center --- */
+/* --- Navbar Fix: Logo Left, Links Centered --- */
 .navbar {
     background-color: black;
     padding: 15px 40px;
     display: flex;
-    justify-content: space-between; /* Pushes Logo to left, UL to right */
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+.logo {
+    flex: 1; /* Takes up space on the left to help push links to center */
+    display: flex;
+    align-items: center;
 }
 
 .logo img { 
@@ -39,31 +44,40 @@ body {
     display: flex; 
     margin: 0; 
     padding: 0;
+    flex: 2; /* Takes up more space to allow centering */
+    justify-content: center; /* This centers the links in the middle */
 }
 
-.navbar li { margin-left: 30px; }
+/* Adds a ghost element on the right to perfectly balance the logo for true centering */
+.navbar::after {
+    content: "";
+    flex: 1;
+}
+
+.navbar li { margin: 0 15px; }
 .navbar a { 
     color: white; 
     text-decoration: none; 
     font-weight: 600; 
     transition: 0.3s; 
+    white-space: nowrap;
 }
 .navbar a:hover, .navbar a.active { color: var(--color-primary); }
 
-/* --- Container: Global but not for Navbar --- */
+/* --- Container --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-/* --- Portfolio Grid Fix: Sizing and Alignment --- */
+/* --- Portfolio Grid Fix: Consistent Sizing --- */
 .project-grid { 
     display: grid; 
-    /* This ensures cards don't stretch to infinity */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 350px)); 
-    gap: 40px; 
-    justify-content: center; /* Centers the whole grid of cards */
+    /* Ensures cards are at least 300px but expand to fill space equally */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; 
+    justify-content: center; 
     margin-top: 50px;
 }
 
@@ -77,18 +91,21 @@ body {
     transition: 0.3s;
     display: flex;
     flex-direction: column;
+    height: 100%; /* Ensures all cards in a row are the same height */
 }
 
 .project-card img {
     width: 100%;
-    height: 500px; /* Tall height for mobile app screenshots */
+    height: 450px; /* Standardized height */
     object-fit: cover;
+    display: block;
 }
 
 .card-details {
     padding: 20px;
     text-align: center;
     background: #0a0a0a;
+    flex-grow: 1; /* Pushes content to fill card height */
 }
 
 .project-card:hover {
@@ -96,13 +113,13 @@ body {
     border-color: var(--color-primary);
 }
 
-/* --- Contact Page Fix: Proper Centering --- */
+/* --- Contact Page Fix --- */
 .contact-details {
     text-align: center;
     padding: 100px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers items horizontally */
+    align-items: center; 
 }
 
 .contact-links {
@@ -131,10 +148,10 @@ body {
     transform: scale(1.05);
 }
 
-/* --- Case Study / Skills Cards --- */
+/* --- Skills Cards --- */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 30px;
     margin-top: 50px;
 }
@@ -154,8 +171,25 @@ footer { padding: 50px; text-align: center; color: #444; }
 
 /* --- Mobile Responsive --- */
 @media (max-width: 768px) {
-    .navbar { padding: 15px 20px; }
-    .navbar ul { display: none; } /* Consider a burger menu for mobile later */
-    .skills-grid { grid-template-columns: 1fr; }
-    .project-grid { grid-template-columns: 1fr; }
+    .navbar { 
+        padding: 15px 20px; 
+        flex-direction: row; /* Keep logo and hamburger/links on same line */
+    }
+    
+    .navbar::after { display: none; } /* Remove the centering spacer on mobile */
+    
+    .navbar ul { 
+        display: none; /* Recommended: Replace with a toggle menu later */
+    } 
+    
+    .project-grid { 
+        grid-template-columns: 1fr; 
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project-card img {
+        height: 350px; /* Slightly shorter images for mobile screens */
+    }
 }
