@@ -22,14 +22,14 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    text-align: center; /* Ensures global headers and taglines are centered */
+    text-align: center; /* Centers global headers and taglines */
 }
 
 h1 { font-size: 3.5em; font-weight: 800; text-align: center; margin-bottom: 10px; }
 h2 { font-size: 2em; color: var(--color-primary); text-align: center; margin: 60px 0 30px; text-transform: uppercase; }
 .tagline { font-size: 1.3em; color: #aaa; text-align: center; margin-bottom: 20px; }
 
-
+/* --- Navbar (FIXED: CENTERED) --- */
 .navbar {
     background-color: black;
     padding: 20px 40px;
@@ -94,7 +94,7 @@ h2 { font-size: 2em; color: var(--color-primary); text-align: center; margin: 60
 
 .profile-summary p { margin-bottom: 20px; font-size: 1.1rem; color: #ccc; }
 
-/* --- Case Study Cards (Role, Process, Takeaway) --- */
+/* --- Case Study / Skills Cards (Bullet Fix) --- */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -125,9 +125,31 @@ h2 { font-size: 2em; color: var(--color-primary); text-align: center; margin: 60
     text-transform: uppercase;
 }
 
+.skill-category ul {
+    list-style: none; /* REMOVES FLOATING BULLETS */
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category li {
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #ddd;
+    border-bottom: 1px solid #222;
+}
+
+.skill-category li:last-child { border-bottom: none; }
+
 .skill-category p { font-size: 0.95rem; color: #ccc; line-height: 1.6; }
 
-/* --- Contact Page (FIXED: CENTERED BUTTONS) --- */
+/* --- Contact Section (FIXED: CENTERED) --- */
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the heading and text */
+    justify-content: center;
+}
+
 .contact-links {
     display: flex;
     justify-content: center; /* Centers the row of buttons */
