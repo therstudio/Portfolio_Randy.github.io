@@ -143,37 +143,57 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
 .cert-issuer { color: var(--color-primary); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 5px; }
 .cert-date { color: #666; font-size: 0.85em; }
 
-/* --- Improved Profile Section (About Me) --- */
+/* --- Profile Section Layout --- */
 .profile-section { 
     display: flex; 
     gap: 50px; 
-    align-items: center; 
+    align-items: flex-start; /* Aligns photo and text to the top */
     text-align: left; 
     margin-bottom: 50px; 
     flex-wrap: wrap; 
-    justify-content: center;
 }
 
+/* This is the 'cage' for your photo */
 .profile-image-wrapper { 
-    flex: 1; 
-    min-width: 250px; 
-    max-width: 400px; /* Limits the photo size so it doesn't get huge */
+    flex: 0 0 350px; /* Do not grow, do not shrink, stay at 350px */
+    max-width: 350px;
 }
 
 .profile-photo { 
     width: 100%; 
     height: auto; 
-    max-height: 500px; 
     border-radius: 12px; 
     object-fit: cover; 
     border: 2px solid var(--color-primary);
+    display: block;
 }
 
+/* This allows the text to take up the remaining space */
 .profile-summary { 
-    flex: 2; 
+    flex: 1; 
     min-width: 300px; 
 }
 
+.profile-summary p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-image-wrapper {
+        flex: 0 0 auto;
+        max-width: 100%;
+        width: 280px; /* Slightly smaller on mobile */
+    }
+}
 /* --- Buttons --- */
 .btn {
     display: inline-block;
