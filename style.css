@@ -4,8 +4,6 @@
     --color-primary: #e10600;
     --color-secondary: #ffffff;
     --color-dark-base: #000000;
-    --color-light-bg: #111111;
-    --color-text: #ffffff;
 }
 
 /* --- Base Styles --- */
@@ -18,51 +16,58 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-h1 { font-size: 3.5em; font-weight: 800; text-align: center; margin-bottom: 10px; }
-h2 { font-size: 2em; color: var(--color-primary); text-align: center; margin: 60px 0 30px; text-transform: uppercase; }
-
-/* --- Navbar (FIXED: LOGO LEFT, LINKS CENTER) --- */
+/* --- Navbar Fix: Logo Left, Links Right/Center --- */
 .navbar {
     background-color: black;
     padding: 15px 40px;
     display: flex;
+    justify-content: space-between; /* Pushes Logo to left, UL to right */
     align-items: center;
-    justify-content: space-between; /* Logo stays left, Links stay right/center */
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.logo img { height: 40px; width: auto; display: block; }
+.logo img { 
+    height: 40px; 
+    width: auto; 
+    display: block; 
+}
 
 .navbar ul { 
     list-style: none; 
     display: flex; 
     margin: 0; 
     padding: 0;
-    flex-grow: 1;
-    justify-content: center; /* This keeps the links centered in the remaining space */
 }
 
-.navbar li { margin: 0 20px; }
-.navbar a { color: white; text-decoration: none; font-weight: 600; transition: 0.3s; }
+.navbar li { margin-left: 30px; }
+.navbar a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 600; 
+    transition: 0.3s; 
+}
 .navbar a:hover, .navbar a.active { color: var(--color-primary); }
 
-/* --- Portfolio/Project Grid (FIXED SIZING) --- */
-.project-grid, .cert-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Prevents cards from stretching too wide */
-    gap: 30px; 
-    margin-top: 40px;
+/* --- Container: Global but not for Navbar --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-.project-card, .cert-card {
+/* --- Portfolio Grid Fix: Sizing and Alignment --- */
+.project-grid { 
+    display: grid; 
+    /* This ensures cards don't stretch to infinity */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px)); 
+    gap: 40px; 
+    justify-content: center; /* Centers the whole grid of cards */
+    margin-top: 50px;
+}
+
+.project-card {
     background: #111;
     border-radius: 18px;
     border: 1px solid #222;
@@ -72,34 +77,32 @@ h2 { font-size: 2em; color: var(--color-primary); text-align: center; margin: 60
     transition: 0.3s;
     display: flex;
     flex-direction: column;
-    max-width: 400px; /* Ensures cards don't get messily large */
-    margin: 0 auto;  /* Centers cards within their grid slot */
 }
 
 .project-card img {
     width: 100%;
-    height: 450px; /* Matches the tall mobile-style screenshots in your image */
+    height: 500px; /* Tall height for mobile app screenshots */
     object-fit: cover;
 }
 
+.card-details {
+    padding: 20px;
+    text-align: center;
+    background: #0a0a0a;
+}
+
 .project-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     border-color: var(--color-primary);
 }
 
-.card-details {
-    padding: 25px;
-    text-align: center;
-    background: #000;
-}
-
-/* --- Contact Page (ONLY THESE ARE FULLY CENTERED) --- */
+/* --- Contact Page Fix: Proper Centering --- */
 .contact-details {
+    text-align: center;
+    padding: 100px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 60px 0;
+    align-items: center; /* Centers items horizontally */
 }
 
 .contact-links {
@@ -110,20 +113,22 @@ h2 { font-size: 2em; color: var(--color-primary); text-align: center; margin: 60
     flex-wrap: wrap;
 }
 
-.contact-btn {
+.btn {
+    display: inline-block;
     background: var(--color-primary);
     color: white !important;
     padding: 15px 35px;
-    border-radius: 12px;
-    font-weight: 700;
+    border-radius: 10px;
     text-decoration: none;
-    min-width: 160px;
+    font-weight: 700;
+    min-width: 150px;
     transition: 0.3s;
 }
 
-.contact-btn:hover {
+.btn:hover {
+    background: white;
+    color: black !important;
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(225, 6, 0, 0.3);
 }
 
 /* --- Case Study / Skills Cards --- */
@@ -142,10 +147,15 @@ h2 { font-size: 2em; color: var(--color-primary); text-align: center; margin: 60
     text-align: center;
 }
 
-.skill-category ul { list-style: none; padding: 0; margin: 0; }
+.skill-category ul { list-style: none; padding: 0; }
+
+/* --- Footer --- */
+footer { padding: 50px; text-align: center; color: #444; }
 
 /* --- Mobile Responsive --- */
-@media (max-width: 950px) {
+@media (max-width: 768px) {
+    .navbar { padding: 15px 20px; }
+    .navbar ul { display: none; } /* Consider a burger menu for mobile later */
     .skills-grid { grid-template-columns: 1fr; }
-    .navbar { flex-direction: column; gap: 15px; }
+    .project-grid { grid-template-columns: 1fr; }
 }
