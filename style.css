@@ -65,16 +65,15 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
 
 .navbar .logo img { height: 70px; }
 
-/* --- Grid Systems (Projects & Certificates) --- */
-.project-grid, .cert-grid, .skills-grid { 
+/* --- Grid System --- */
+.project-grid, .cert-grid { 
     display: grid; 
-    /* auto-fit ensures projects wrap to a new line when the first row is full */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
     gap: 30px; 
     margin-top: 40px; 
 }
 
-/* --- Project Cards (Portfolio Page) --- */
+/* --- Project Cards (The Fix is Here) --- */
 .project-card {
     background: #111;
     border-radius: 12px;
@@ -83,7 +82,7 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
     text-align: left;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100%; /* Ensures all cards in a row are equal height */
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -92,11 +91,14 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
     border-color: var(--color-primary);
 }
 
+/* IMAGE CROP FIX */
 .project-card img { 
     width: 100%; 
-    height: 220px; 
-    object-fit: cover; 
-    display: block; 
+    aspect-ratio: 16 / 10; /* Forces every image to this exact shape */
+    object-fit: cover;     /* Crops the image to fill the space without stretching */
+    object-position: top;  /* Ensures the top of your design is visible */
+    display: block;
+    border-bottom: 1px solid #222;
 }
 
 .card-details { 
@@ -104,19 +106,24 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
     flex-grow: 1; 
     display: flex; 
     flex-direction: column;
-    justify-content: space-between; /* Pushes button to the bottom */
+    justify-content: space-between; 
 }
 
-.card-details h3 { color: var(--color-secondary); margin-top: 0; font-size: 1.3em; }
+.card-details h3 { 
+    color: var(--color-secondary); 
+    margin: 0 0 10px 0; 
+    font-size: 1.2rem; 
+    line-height: 1.3;
+}
 
 .tags { 
     color: var(--color-primary); 
     font-weight: 600; 
-    font-size: 0.9em; 
+    font-size: 0.85em; 
     margin-bottom: 20px; 
 }
 
-/* --- Certificate Cards (About Page) --- */
+/* --- Certificates Cards --- */
 .cert-card {
     background: #111;
     border-radius: 12px;
@@ -127,44 +134,15 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .cert-card:hover {
     border-color: var(--color-primary);
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(225, 6, 0, 0.2);
 }
 
-.cert-issuer {
-    color: var(--color-primary);
-    font-weight: 700;
-    margin-bottom: 8px;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.cert-card h3 {
-    color: var(--color-secondary);
-    margin: 0 0 10px 0;
-    font-size: 1.25em;
-    line-height: 1.4;
-}
-
-.cert-date { color: #777; font-size: 0.85em; }
-
-.cert-link-text {
-    margin-top: 25px;
-    font-size: 0.9em;
-    font-weight: 600;
-    color: var(--color-primary);
-    display: flex;
-    align-items: center;
-}
-
-.cert-link-text::after { content: ' →'; transition: margin-left 0.2s; }
-.cert-card:hover .cert-link-text::after { margin-left: 8px; }
+.cert-issuer { color: var(--color-primary); font-weight: 700; font-size: 0.8em; text-transform: uppercase; margin-bottom: 5px; }
+.cert-date { color: #666; font-size: 0.85em; }
 
 /* --- Buttons --- */
 .btn {
@@ -177,24 +155,13 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
     font-weight: 600;
     text-align: center;
     transition: 0.3s;
-    margin-top: auto; /* Ensures button sticks to bottom of card-details */
+    margin-top: auto; /* Keeps buttons aligned at the bottom */
 }
 
 .btn:hover { 
     transform: scale(1.05); 
     box-shadow: 0 5px 15px rgba(225,6,0,0.4); 
 }
-
-/* --- Profile Section (About Page) --- */
-.profile-section { display: flex; gap: 50px; align-items: center; text-align: left; margin-bottom: 50px; flex-wrap: wrap; }
-.profile-image-wrapper { flex: 1; min-width: 250px; }
-.profile-photo { width: 100%; border-radius: 12px; }
-.profile-summary { flex: 2; min-width: 300px; }
-
-/* --- Skills List --- */
-.skill-category ul { list-style: none; padding: 0; }
-.skill-category li { margin-bottom: 8px; color: #ccc; }
-.skill-category li::before { content: "• "; color: var(--color-primary); }
 
 /* --- Animations --- */
 .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
@@ -203,11 +170,9 @@ h2 { font-size: 2em; color: var(--color-primary); margin: 60px 0 30px; text-tran
 /* --- Footer --- */
 footer { margin-top: 60px; padding: 20px; color: #666; font-size: 0.9em; }
 
-/* --- Mobile Responsiveness --- */
+/* --- Responsive --- */
 @media (max-width: 768px) {
     .container { padding: 20px; }
     h1 { font-size: 2.5em; }
-    .navbar ul { flex-direction: column; align-items: center; }
-    .navbar li { margin: 10px 0; }
     .project-grid { grid-template-columns: 1fr; }
 }
